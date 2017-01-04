@@ -1,0 +1,227 @@
+html,
+body {
+  font-size: 5.2vH;
+  line-height: 1.2;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  border: 0px;
+  padding: 0px;
+}
+
+.alarmHeader {
+  height: 70px;
+  color: black;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 15px;
+}
+
+.alarmHeader #time {
+  color: #d3d3d3;
+}
+
+.alarmBody {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: calc(100% + 30px);
+  color: white;
+  height: 200px;
+  background-color: #ff5722;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  position: absolute;
+}
+
+#okeyword,
+#oekeyword {
+  font-weight: bold;
+}
+
+.alarmMap {
+  margin-top: 200px;
+  height: calc(100vh - 370px);
+}
+
+.alarmMap>div {
+  height: 100%;
+  padding: 0px;
+}
+
+.alarmMap #ohere {
+  border-right: 3px solid black;
+}
+
+
+/**
+        Map
+    */
+
+div.opcell {
+  width: 100%;
+  height: 100%;
+}
+
+.alarmFooter {
+  height: 100px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  width: calc(100% + 30px);
+  z-index: 2;
+  position: absolute;
+  /*padding-left: 30px;*/
+  background-image: url(/images/G5_Logo_Small.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.alarmFooter #orsc img {
+  padding-left: 10px;
+  padding-top: 7px;
+}
+
+.alarmFooter .oresource {
+  font-weight: bold;
+  float: left;
+  margin-left: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  background-color: #757575;
+  color: white;
+  padding: 8px;
+}
+
+.alarmFooter .alarmed {
+  background: #ff5722;
+}
+
+
+/**
+    Info
+*/
+
+.header {
+  font-size: 3.4vW;
+}
+
+#time {
+  font-size: 5.3vW;
+  font-weight: bold;
+}
+
+.jumbotron {
+  margin-top: 1.1vW;
+  padding: 38px 0;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  color: white;
+  background-color: #383838;
+  -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cal-content,
+.weatherText {
+  font-size: 3.4vH;
+}
+
+.infoText {
+  font-size: 28pt;
+}
+
+#weather {
+  margin-top: 20px;
+}
+
+i.wi {
+  font-size: 9.6vW;
+  margin-top: 3.5vW;
+  margin-bottom: 2.0vW;
+}
+
+.weatherForecast {
+  text-align: center;
+  font-size: 28pt;
+}
+
+
+/**
+ * Warnings
+ */
+
+#paneIdle .dwdwarnings {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  padding: 10px;
+}
+
+#paneIdle .warning {
+  padding: 3px 5px;
+}
+
+#paneIdle .warning h1 {
+  font-size: 24pt;
+  margin: 3px 0 3px 0;
+}
+
+#paneIdle .warning p {
+  font-size: 18pt;
+}
+
+#paneIdle .warnIconBox {
+  float: left;
+  margin-right: 10px;
+  margin-left: 5px;
+  font-size: 0;
+}
+
+#paneIdle .warnIconBox .warnIcon,
+#paneIdle .warnIconBox .warnIconFrame {
+  width: 80px;
+  height: 80px;
+}
+
+#paneIdle .warnIconBox .warnIconFrame {
+  margin-left: -80px;
+}
+
+#paneIdle .warnLevel1,
+#paneIdle .warnLevel2,
+#paneIdle .warnLevel3,
+#paneIdle .warnLevel4,
+#paneIdle .warnLevel5,
+#paneIdle .warnLevel10,
+#paneIdle .warnLevel20 {
+  border-style: solid;
+  border-width: 3px;
+}
+
+#paneIdle .warnLevel1,
+#paneIdle .warnLevel2 {
+  border-color: #ffeb3b;
+}
+
+#paneIdle .warnLevel3 {
+  border-color: #fb8c00;
+}
+
+#paneIdle .warnLevel4 {
+  border-color: #e53935;
+}
+
+#paneIdle .warnLevel5 {
+  border-color: #880e4f;
+}
+
+#paneIdle .warnLevel10 {
+  border-color: #cc99ff;
+}
+
+#paneIdle .warnLevel20 {
+  border-color: #FE68FE;
+}

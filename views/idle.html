@@ -1,0 +1,33 @@
+<!-- HEAD -->
+<div class="container-fluid">
+  <div class="row header">
+    <div class="col-md-3">
+      <img src="/Images/FFW_Mauern_Logo.jpg" height="125" style="margin-top: 10px;" />
+    </div>
+    <div class="col-md-6" style="text-align: center; margin-top: 35px">
+      {{configShared['FD.Name']}}
+    </div>
+    <div class="col-md-3" style="text-align: right;">
+      <img src="/Images/G5_Logo.png" width="260" style="margin-right: 20px; margin-top: 10px;" />
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron">
+    <aw-clock />
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      Wetter {{configShared['FD.City']}}:
+      <div class="row" id="weather" aw-weather="{{configShared['FD.ZipCode']}}"></div>
+      <div aw-warnings></div>
+    </div>
+
+    <div class="col-md-6">
+      Veranstaltungen:
+      <div aw-calendar></div>
+    </div>
+  </div>
+</div>

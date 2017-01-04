@@ -1,0 +1,16 @@
+{
+  "name": "OpenFireSource-WebService",
+  "version": "0.9.0",
+  "private": true,
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.13.6",
+    "jshint": "^2.9.2"
+  }
+}

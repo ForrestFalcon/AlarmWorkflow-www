@@ -1,0 +1,127 @@
+$default_size: 28pt;
+/**
+    Info
+*/
+
+.header {
+    font-size: 3.4vW;
+}
+
+#time {
+    font-size: 5.3vW;
+    font-weight: bold;
+}
+
+.jumbotron {
+    margin-top: 1.1vW;
+    padding: 38px 0;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    color: white;
+    background-color: #383838;
+    -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.5);
+}
+
+.lion {
+    background-color: #1E3E95;
+}
+
+.cal-content,
+.weatherText {
+    font-size: 3.4vH;
+}
+
+.infoText {
+    font-size: $default_size;
+}
+
+#weather {
+    margin-top: 20px;
+}
+
+i.wi {
+    font-size: 9.6vW;
+    margin-top: 3.5vW;
+    margin-bottom: 2.0vW;
+}
+
+.weatherForecast {
+    text-align: center;
+    font-size: $default_size;
+}
+
+
+/**
+ * Warnings
+ */
+
+#paneIdle {
+    .dwdwarnings { 
+        position: fixed;
+        bottom: 0;
+        left:  0;
+        width: 50%;
+        padding: 10px;
+    }
+    
+    .warning {
+        padding: 3px 5px;
+        
+        h1 {
+            font-size: $default_size - 4;
+            margin: 3px 0 3px 0;
+        }
+        p {
+            font-size: 18pt;
+        }
+    }
+    
+    .warnIconBox {
+        float: left;
+        margin-right: 10px;
+        margin-left: 5px; 
+        font-size: 0;
+        
+        .warnIcon, .warnIconFrame {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .warnIconFrame {
+            margin-left: -80px;
+        }
+    }
+    
+    .warnLevel1, 
+    .warnLevel2, 
+    .warnLevel3, 
+    .warnLevel4, 
+    .warnLevel5,
+    .warnLevel10,
+    .warnLevel20, {
+        border-style: solid;
+        border-width: 3px;
+    }
+    
+    .warnLevel1, .warnLevel2 {
+        border-color: #ffeb3b;
+    }
+    .warnLevel3 {
+        border-color: #fb8c00;
+    }
+    .warnLevel4 {
+        border-color: #e53935;
+    }
+    .warnLevel5 {
+        border-color: #880e4f;
+    }
+    .warnLevel10 {
+        border-color: #cc99ff;
+    }
+    .warnLevel20 {
+        border-color: #FE68FE;
+    }
+}

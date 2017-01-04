@@ -1,0 +1,26 @@
+<div class="col-md-4 weatherForecast" ng-cloak>
+  {{weather.forecast[0].day}}
+  <br />
+  <i class="wi wi-yahoo-{{weather.forecast[0].code}}"></i>
+  <br />
+  {{weather.forecast[0].low}} / {{weather.forecast[0].high}} °C
+  <p class="weatherText hidden-warnings"> {{weather.forecast[0].text}} </p>
+</div>
+
+<div class="col-md-4 weatherForecast" ng-cloak>
+  {{weather.forecast[1].day}}
+  <br />
+  <i class="wi wi-yahoo-{{weather.forecast[1].code}}"></i>
+  <br />
+  {{weather.forecast[1].low}} / {{weather.forecast[1].high}} °C
+  <p class="weatherText hidden-warnings"> {{weather.forecast[1].text}} </p>
+</div>
+
+<div class="col-md-4 weatherForecast" ng-cloak>
+  {{weather.forecast[2].day}}
+  <br />
+  <i class="wi wi-yahoo-{{weather.forecast[2].code}}"></i>
+  <br />
+  {{weather.forecast[2].low}} / {{weather.forecast[2].high}} °C
+  <p class="weatherText hidden-warnings"> {{weather.forecast[2].text}} </p>
+</div>

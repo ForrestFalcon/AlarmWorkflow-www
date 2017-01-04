@@ -1,0 +1,32 @@
+{
+  "name": "OpenFireSource-WebService",
+  "description": "A web interface for OpenFireSource",
+  "main": "",
+  "authors": [
+    "ForrestFalcon"
+  ],
+  "license": "GPL",
+  "keywords": [
+    "OpenFireSource"
+  ],
+
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "angular-route": "1.4.x",
+    "bootstrap": "~3.1.x",
+    "jquery": "~2.1.x",
+    "leaflet": "0.7.x",
+    "requirejs": "2.1.x",
+    "stacktrace-js": "1.2.x"
+  },
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

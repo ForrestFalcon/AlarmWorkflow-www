@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "amd",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true
+    },
+    "filesGlob": [
+        "**/*.ts",
+        "**/*.tsx",
+        "!node_modules/**"
+    ],
+    "compileOnSave": true,
+    //"buildOnSave": false,
+    "files": [
+        "assets/app/alarm/AlarmApp.ts",
+        "assets/app/alarm/Controllers/AlarmCtrl.ts",
+        "assets/app/alarm/Directives/AwCalendar.ts",
+        "assets/app/alarm/Directives/AwClock.ts",
+        "assets/app/alarm/Directives/AwWarnings.ts",
+        "assets/app/alarm/Directives/AwWeather.ts",
+        "assets/app/alarm/Modules/ISettingsService.ts",
+        "assets/app/alarm/requireMain.ts",
+        "assets/app/alarm/Services/SettingsService.ts",
+        "assets/app/typings/angularjs/angular.d.ts",
+        "assets/app/typings/googlemaps/google.maps.d.ts",
+        "assets/app/typings/jquery/jquery.d.ts",
+        "assets/app/typings/leaflet/leaflet.d.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}

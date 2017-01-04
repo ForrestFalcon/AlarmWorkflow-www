@@ -1,0 +1,38 @@
+
+      <div class="alarmHeader row">
+        <div class="col-md-6">
+          <img src="/Images/FFW_Mauern_Logo.jpg" height="60px" />
+          {{configShared['FD.Name']}}
+        </div>
+        <div class="col-md-6" style="text-align: right" id="stopwatch">
+          Zeit seit Einsatz
+        </div>
+      </div>
+
+      <div class="alarmBody row">
+        <div class="col-md-6">
+          <!--<span class="alarm" id="opicture"></span>-->
+          <span class="alarm" style="font-weight: bold;">{{op.Keywords.Keyword}}</span>
+          <br />
+          <span class="alarm">{{op.Comment}}</span>
+        </div>
+        <div class="col-md-6">
+          <span class="alarm" style="font-weight: bold;">Stichwörter:
+            {{op.Keywords.EmergencyKeyword}}
+          </span>
+          <br />
+          <span class="alarm">{{oaddress}}</span>
+        </div>
+      </div>
+      <div class="alarmMap row">
+        <div class="col-md-8">
+          <!--<div class="opcell" id="ogoogle"></div>-->
+          <div class="opcell" id="ohere"></div>
+        </div>
+        <div class="col-md-4">
+          <div class="opcell" id="oosm"></div>
+        </div>
+      </div>
+      <div class="alarmFooter row">
+          <span id="orsc"></span>
+      </div>

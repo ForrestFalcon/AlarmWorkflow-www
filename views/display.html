@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AlarmWorkflow</title>
+
+  <!-- 1. Load libraries -->
+  <script src="/assets/scripts/date.format.js"></script>
+  <script src="/assets/scripts/jintervals.js"></script>
+  <script src="/modules/stacktrace-js/dist/stacktrace.min.js"></script>
+  <script src="/modules/requirejs/require.js" data-main="/assets/app/alarm/requireMain"></script>
+
+  <link rel="stylesheet" href="/assets/css/leaflet.css" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="/modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/weather-icons.css" />
+  <link rel="stylesheet" href="/assets/css/design.css" />
+
+  <script type="text/javascript">
+    var emkResources = @Model.EmkResources;;
+  </script>
+
+  <meta charset="utf-8" />
+</head>
+
+<!-- 3. Display the application -->
+
+<body>
+  <div ng-controller="alarmCtrl" ng-cloak>
+    <div id="paneError" ng-if="hasErrors">
+      <span>Ein Fehler ist aufgetreten.
+        <br /> Bitte sehen Sie in den Serverlogs nach.</span>
+    </div>
+    <div id="paneIdle" ng-show="!hasErrors && op == null">
+		@Partial['idle']
+	</div>
+    <div id="paneOperation" ng-hide="hasErrors || op == null">
+		@Partial['alarm']
+    </div>
+  </div>
+</body>
+
+</html>
