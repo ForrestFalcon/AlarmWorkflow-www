@@ -7,7 +7,10 @@ import $ = require("jquery");
 import ng = require("angular");
 import L = require("leaflet");
 
-import {ISettingsService, ISettingSection} from "../Modules/ISettingsService";
+import {
+  ISettingsService,
+  ISettingSection
+} from "../Modules/ISettingsService";
 
 export class AlarmCtrl {
 
@@ -48,7 +51,7 @@ export class AlarmCtrl {
     private $timeout: ng.ITimeoutService,
     private configWebService: ISettingSection,
     private configShared: ISettingSection
-    ) {
+  ) {
     console.log("controller start");
 
     console.log(configWebService);
@@ -70,18 +73,18 @@ export class AlarmCtrl {
     var orsc = "";
 
     // Resources
-    $.get("/api/operation/getFilteredResources/" + currentOpId, function(data) {
+    $.get("/api/operation/getFilteredResources/" + currentOpId, function (data) {
       var value;
 
-      emkResources.forEach(function(emkResource) {
+      emkResources.forEach(function (emkResource) {
         var isAlarmed = false;
-        data.forEach(function(resource) {
+        data.forEach(function (resource) {
           if (resource.Emk != null && resource.Emk.DisplayName == emkResource.DisplayName)
             isAlarmed = true;
         });
 
         if (isAlarmed)
-          value = "<div class=\"oresource alarmed\">" + emkResource.DisplayName + "</div>";
+          value = "<div class=\"oresource alarmColor\">" + emkResource.DisplayName + "</div>";
         else
           value = "<div class=\"oresource\">" + emkResource.DisplayName + "</div>";
 
@@ -104,9 +107,12 @@ export class AlarmCtrl {
     try {
       //Destroy old stopwatch for a new operation
       watch.stopwatch('destroy');
-    } catch (err) { }
+    } catch (err) {}
 
-    watch.stopwatch({ format: text, startTime: startWatch });
+    watch.stopwatch({
+      format: text,
+      startTime: startWatch
+    });
     watch.stopwatch('start');
   }
 
@@ -145,10 +151,10 @@ export class AlarmCtrl {
 
   private startHereMap(op) {
 
-    var sText = this.$scope.configShared["FD.ZipCode"] + " "
-      + this.$scope.configShared["FD.City"] + ", "
-      + this.$scope.configShared["FD.Street"] + " "
-      + this.$scope.configShared["FD.StreetNumber"];
+    var sText = this.$scope.configShared["FD.ZipCode"] + " " +
+      this.$scope.configShared["FD.City"] + ", " +
+      this.$scope.configShared["FD.Street"] + " " +
+      this.$scope.configShared["FD.StreetNumber"];
 
     var geocoder = this.hPlatform.getGeocodingService(),
       geocodingParameters = {
@@ -172,7 +178,7 @@ export class AlarmCtrl {
         }
       },
       this.onError
-      );
+    );
   }
 
   private calculateRouteFromAtoB(from, to) {
@@ -195,7 +201,7 @@ export class AlarmCtrl {
         this.addRouteShapeToMap(route);
       },
       this.onError
-      );
+    );
   }
 
   /**
@@ -207,7 +213,7 @@ export class AlarmCtrl {
       routeShape = route.shape,
       polyline;
 
-    routeShape.forEach(function(point) {
+    routeShape.forEach(function (point) {
       var parts = point.split(',');
       strip.pushLatLngAlt(parts[0], parts[1]);
     });
@@ -284,8 +290,17 @@ export class AlarmCtrl {
           oaddress = oaddress.replace("  ", " ");
           this.$scope.oaddress = oaddress;
 
-          this.setResources(op.Id);
+          
+          var alarmBody = $(".alarmColor");
+          var defaultColor = alarmBody.css("background-color");
+          if (this.$scope.configWebService["ChangeAlarmColor"]) {
+            if (op.Keywords.EmergencyKeyword.startsWith("THL"))
+              defaultColor = "#000F75";
+          }
 
+          alarmBody.css("background-color", defaultColor);
+
+          this.setResources(op.Id);
           this.startOFMap(op);
           this.startHereMap(op);
           this.startStopwatch(op);

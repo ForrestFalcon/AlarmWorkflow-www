@@ -14,7 +14,6 @@
   width: calc(100% + 30px);
   color: white;
   height: 200px;
-  background-color: #ff5722;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
   z-index: 2;
   position: absolute;
@@ -71,6 +70,6 @@ div.opcell {
   padding: 8px;
 }
 
-.alarmFooter .alarmed {
-  background: #ff5722;
+.alarmColor {
+  background: #a72920 !important; 
 }

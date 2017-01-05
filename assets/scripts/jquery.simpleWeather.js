@@ -103,7 +103,12 @@
 
             options.success(weather);
           } else {
-            options.error({message: "There was an error retrieving the latest weather information. Please try again.", error: data.query.results.channel.item.title});
+            var error = data.query;
+            if(errro.results) {
+              error = error.results.channel.item.title;
+            }
+
+            options.error({message: "There was an error retrieving the latest weather information. Please try again.", error: error});
           }
         }
       );
