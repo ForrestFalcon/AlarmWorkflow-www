@@ -87,7 +87,8 @@ export class AwWeather implements ng.IDirective {
     "AM Rain/Snow Showers": "Schneeregen",
     "Rain/Snow Showers Late": "Schneeregen",
     "AM Snow": "Vormittags Schnee",
-    "Rain And Snow": "Regen/Schnee"
+    "Rain And Snow": "Schneeregen",
+	"Snow Showers": "Schneeschauer"
   };
 
   private getWeatherTranslationText(text) {
